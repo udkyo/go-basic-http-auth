@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	username = "abc"
-	password = "123"
+	username = "Administrator"
+	password = "password"
 )
 
 func main() {

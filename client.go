@@ -6,11 +6,6 @@ import (
 	"time"
 )
 
-var (
-	username = "abc"
-	password = "123"
-)
-
 func main() {
 	call("http://localhost:8234/example", "POST")
 }
@@ -23,7 +18,7 @@ func call(url, method string) error {
 	if err != nil {
 		return fmt.Errorf("Got error %s", err.Error())
 	}
-	req.SetBasicAuth(username, password)
+	req.SetBasicAuth("Administrator", "password")
 	response, err := client.Do(req)
 	if err != nil {
 		return fmt.Errorf("Got error %s", err.Error())
